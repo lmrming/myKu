@@ -1,0 +1,38 @@
+# Redis 服务配置
+# 开发环境使用 Docker Compose 启动 Redis
+
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: myku-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+    command: redis-server /usr/local/etc/redis/redis.conf
+    restart: unless-stopped
+    networks:
+      - myku-network
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: myku-redis-ui
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    networks:
+      - myku-network
+
+volumes:
+  redis-data:
+    driver: local
+
+networks:
+  myku-network:
+    driver: bridge

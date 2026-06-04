@@ -1,0 +1,229 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+/* ============================================
+   MYKU Design Tokens
+   Editorial Magazine Theme · Hallmark Redesign
+   ============================================
+   
+   Design DNA:
+   - Apple minimalism
+   - International editorial magazine typography
+   - Scandinavian whitespace
+   - Premium brand visual
+   - iOS26 frosted glass
+   
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  /* ========================================
+     Color Palette — Premium Editorial
+     ======================================== */
+  
+  /* Paper Scale — Warm off-white, cream */
+  --color-paper-1: #FAFAF7;
+  --color-paper-2: #F5F3EE;
+  --color-paper-3: #EFECE6;
+  --color-paper-4: #E8E4DC;
+  --color-paper-5: #DDD8CE;
+  
+  /* Ink Scale — Rich charcoal */
+  --color-ink-1: #F5F5F5;
+  --color-ink-2: #E0E0E0;
+  --color-ink-3: #C0C0C0;
+  --color-ink-4: #999999;
+  --color-ink-5: #777777;
+  --color-ink-6: #555555;
+  --color-ink-7: #333333;
+  --color-ink-8: #222222;
+  --color-ink-9: #1A1A1A;
+  --color-ink-10: #111111;
+  
+  /* Accent — Deep olive green (sophisticated) */
+  --color-accent-1: #F5F5F0;
+  --color-accent-2: #E8E8E0;
+  --color-accent-3: #D4D4C8;
+  --color-accent-4: #A8A894;
+  --color-accent-5: #7A7A6B;
+  --color-accent-6: #5C5C4F;
+  --color-accent-7: #3D3D35;
+  --color-accent-8: #2B2B26;
+  
+  /* Semantic Aliases */
+  --color-bg-primary: var(--color-paper-1);
+  --color-bg-secondary: var(--color-paper-2);
+  --color-bg-tertiary: var(--color-paper-3);
+  --color-surface: var(--color-paper-1);
+  --color-surface-elevated: var(--color-paper-1);
+  
+  --color-text-primary: var(--color-ink-10);
+  --color-text-secondary: var(--color-ink-6);
+  --color-text-tertiary: var(--color-ink-4);
+  --color-text-inverse: var(--color-paper-1);
+  
+  --color-border: var(--color-paper-4);
+  --color-border-subtle: var(--color-paper-3);
+  --color-border-strong: var(--color-paper-5);
+  
+  --color-focus: var(--color-ink-8);
+  --color-focus-ring: rgba(17, 17, 17, 0.15);
+  
+  /* ========================================
+     Typography — Editorial Magazine
+     ========================================
+     
+     Display: Playfair Display — elegant serif
+     Body: Inter Tight — modern geometric sans
+     
+     ======================================== */
+  --font-display: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --font-body: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', monospace;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Font Sizes — Dramatic editorial scale */
+  --font-size-2xs: 0.625rem;   /* 10px */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.375rem;    /* 22px */
+  --font-size-2xl: 1.75rem;    /* 28px */
+  --font-size-3xl: 2.25rem;    /* 36px */
+  --font-size-4xl: 3.5rem;     /* 56px */
+  --font-size-5xl: 5rem;       /* 80px */
+  --font-size-6xl: 7rem;       /* 112px */
+  --font-size-7xl: 9rem;       /* 144px */
+  
+  /* Line Heights — Generous breathing room */
+  --leading-tight: 0.95;
+  --leading-snug: 1.1;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+  
+  /* Letter Spacing */
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.2em;
+  
+  /* ========================================
+     Spacing — Editorial whitespace
+     ======================================== */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+  --space-12: 80px;
+  --space-16: 120px;
+  --space-20: 160px;
+  --space-24: 200px;
+  --space-32: 280px;
+  
+  /* ========================================
+     Border Radius — Minimal, sharp
+     ======================================== */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+  
+  /* ========================================
+     Shadows — Ultra subtle
+     ======================================== */
+  --shadow-color: 25 10% 10%;
+  --shadow-1: 0 1px 2px oklch(var(--shadow-color) / 0.03);
+  --shadow-2: 0 2px 8px oklch(var(--shadow-color) / 0.04);
+  --shadow-3: 0 4px 16px oklch(var(--shadow-color) / 0.05);
+  --shadow-4: 0 8px 32px oklch(var(--shadow-color) / 0.06);
+  
+  /* ========================================
+     Transitions — Slow, cinematic
+     ======================================== */
+  --duration-instant: 0ms;
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 600ms;
+  --duration-slower: 800ms;
+  --duration-slowest: 1200ms;
+  
+  --ease-linear: linear;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-dramatic: cubic-bezier(0.87, 0, 0.13, 1);
+  
+  /* ========================================
+     Z-Index Scale
+     ======================================== */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+}
+
+/* ========================================
+   Dark Mode — Editorial Evening
+   ======================================== */
+.dark {
+  /* Paper Scale — Dark */
+  --color-paper-1: #111111;
+  --color-paper-2: #1A1A1A;
+  --color-paper-3: #222222;
+  --color-paper-4: #2B2B2B;
+  --color-paper-5: #333333;
+  
+  /* Ink Scale — Light */
+  --color-ink-1: #2B2B2B;
+  --color-ink-2: #333333;
+  --color-ink-3: #444444;
+  --color-ink-4: #666666;
+  --color-ink-5: #888888;
+  --color-ink-6: #AAAAAA;
+  --color-ink-7: #CCCCCC;
+  --color-ink-8: #E0E0E0;
+  --color-ink-9: #F0F0F0;
+  --color-ink-10: #FAFAFA;
+  
+  /* Semantic Aliases — Dark */
+  --color-bg-primary: var(--color-paper-1);
+  --color-bg-secondary: var(--color-paper-2);
+  --color-bg-tertiary: var(--color-paper-3);
+  --color-surface: var(--color-paper-2);
+  --color-surface-elevated: var(--color-paper-3);
+  
+  --color-text-primary: var(--color-ink-10);
+  --color-text-secondary: var(--color-ink-6);
+  --color-text-tertiary: var(--color-ink-5);
+  --color-text-inverse: var(--color-paper-1);
+  
+  --color-border: var(--color-ink-2);
+  --color-border-subtle: var(--color-ink-1);
+  --color-border-strong: var(--color-ink-3);
+  
+  /* Shadows — Dark mode */
+  --shadow-color: 0 0% 5%;
+  --shadow-1: 0 1px 2px oklch(var(--shadow-color) / 0.15);
+  --shadow-2: 0 2px 8px oklch(var(--shadow-color) / 0.2);
+  --shadow-3: 0 4px 16px oklch(var(--shadow-color) / 0.25);
+  --shadow-4: 0 8px 32px oklch(var(--shadow-color) / 0.3);
+}

@@ -1,0 +1,21 @@
+# 环境变量与本地配置
+.env
+.env.local
+.env.*.local
+
+# 依赖与构建产物
+node_modules/
+dist/
+build/
+
+# 压测报告与日志
+stress-test-reports/
+*.log
+
+# 系统与编辑器
+.DS_Store
+.vscode/
+
+# 嵌套的独立子仓库(各自有 .git,不应纳入本仓库)
+html-anything/
+html-anything-new/
