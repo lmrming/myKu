@@ -414,7 +414,7 @@ const Notes = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: i * 0.05 }}
-                className={`bg-white dark:bg-zinc-900 rounded-xl p-5 shadow-sm ${viewMode === 'grid' : 'flex items-center gap-4'}`}
+                className={`bg-white dark:bg-zinc-900 rounded-xl p-5 shadow-sm ${viewMode === 'grid' ? '' : 'flex items-center gap-4'}`}
               >
                 <div className="animate-pulse space-y-3">
                   <div className={`h-6 bg-gray-200 dark:bg-zinc-800 rounded w-3/4 ${viewMode === 'list' ? 'w-48' : ''}`} />
